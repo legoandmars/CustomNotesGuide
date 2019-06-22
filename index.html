@@ -50,37 +50,19 @@ BeatSaber
 </div>
 <div class="navbar-menu" id="navMenu">
 <div class="navbar-start">
+<a class="navbar-item" href="#Intro">
+Intro
+</a>
 <a class="navbar-item" href="#Project">
-Project
-</a>
-<a class="navbar-item" href="#Script">
-Custom Platform Script
-</a>
-<div class="navbar-item has-dropdown is-hoverable">
-<a class="navbar-link">
-Creation
-</a>
-<div class="navbar-dropdown">
-<a class="navbar-item" href="#Models">
-Models
-</a>
-<a class="navbar-item" href="#TrackRings">
-Track Rings
-</a>
-<a class="navbar-item" href="#TubeLight">
-Tube Light
-</a>
-<a class="navbar-item" href="#SongEvents">
-Song Events
-</a>
-<a class="navbar-item" href="#Spectogram">
-Spectogram
-</a>
-</div>
-</div>
+Unity Project</a>
+<a class="navbar-item" href="#Creation">
+Creating A Note</a>
+<a class="navbar-item" href="#Materials">
+Adding Materials</a>
 <a class="navbar-item" href="#Exporting">
-Exporting
-</a>
+Exporting Your Notes</a>
+<a class="navbar-item" href="#Custom Colors">
+Custom Colors</a>
 </div>
 <div class="navbar-end">
 <a class="navbar-item donate" target="_blank" href="https://bs.assistant.moe/Donate">
@@ -108,7 +90,7 @@ Exporting
 
 <section class="section">
 <div class="content">
-<h3 id="Project" class="title">Intro</h3>
+<h3 id="Intro" class="title">Intro</h3>
 <hr>
 <p>This guide requires basic knowledge on 3d modeling and the Unity Engine. A few things are needed:</p>
 <ul>
@@ -123,7 +105,7 @@ Exporting
 
 <section class="section">
 <div class="content">
-<h3 class="title" id="Script">Unity Project<small class="subtitle"> The basics</small></h3>
+<h3 class="title" id="Project">Unity Project<small class="subtitle"> The basics</small></h3>
 <hr>
 <p> Open the <a href="https://cdn.discordapp.com/attachments/555803569379606529/588814393182126093/CustomNotes_Unity_Project.zip">custom notes project</a> with Unity. MAKE SURE YOU ARE USING UNITY VERSION 2018.1.6f1!</p>
 <p class="image-container"><img class="image fit" alt="Unity Editor Window" src="resources/01.png" title="Unity Editor Window" data-width="1920"></p>
@@ -149,7 +131,7 @@ Exporting
 
 <section class="section">
 <div class="content">
-<h3 class="title" id="Models">Creating a note</h3>
+<h3 class="title" id="Creation">Creating a note</h3>
 <hr>
 <p>You should already have a 3d model that you're going to use for your note. For this tutorial I'm going to be using a simple triangle mesh I made in blender. Go ahead and import your model into the project.</p>
 <p class="image-container"><img class="image fit" alt="importing into the unity project" src="resources/05.png" title="import" data-width="547"></p>
@@ -189,7 +171,7 @@ Exporting
 
 <section class="section">
 <div class="content">
-<h3 class="title" id="Models">Adding materials</h3>
+<h3 class="title" id="Materials">Adding materials</h3>
 <hr>
 <p>Now that the mesh is properly scaled we can go ahead and add a material to it. In the project window, right click on <kbd>Materials</kbd> and then do <kbd>Create->Material</kbd>. Since this is going to be the material for the mesh of my <kbd>LeftNote</kbd>, I'll name it <kbd>LeftMaterial</kbd>.</p>
 <p class="image-container"><img class="newgameobject" alt="creating a new gameobject" src="resources/17.png" title="import" data-width="520"></p>
@@ -223,7 +205,7 @@ Exporting
 
 <section class="section">
 <div class="content">
-<h3 class="title" id="Models">Exporting your notes<small class="subtitle"> The final steps</small></h3>
+<h3 class="title" id="Exporting">Exporting your notes<small class="subtitle"> The final steps</small></h3>
 <hr>
 <p>Now that our meshes and materials are properly set up, we can go back to the <kbd>NoteDescriptor</kbd> and change the settings. Go to your note's main GameObject and look at the <kbd>NoteDescriptor</kbd> in the properties panel.</p>
 <p class="image-container"><img class="newgameobject" alt="creating a new gameobject" src="resources/29.png" title="import" data-width="455"></p>
@@ -259,10 +241,14 @@ Exporting
 <p>Select your notes and try playing a song.</p>
 <p class="image-container"><img class="newgameobject" alt="creating a new gameobject" src="resources/42.png" title="import" data-width="306"></p>
 <p>If everything looks good ingame, you should be finished! Make sure to try playing with your notes with your headset on at least once before releasing them.</p>
-
 </div>
 </section>
 
+<section class="section">
+<div class="content">
+<h3 class="title" id="Custom Colors">Custom Colors</h3>
+<hr>
+<u>WIP</u>
 </div>
 
 <script src="https://cdn.assistant.moe/js/burger.js"></script>
