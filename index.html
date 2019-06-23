@@ -231,6 +231,9 @@ Custom Colors</a>
 <p class="image-container"><img class="newgameobject" alt="creating a new gameobject" src="resources/37.png" title="import" data-width="594"></p>
 <p class="image-container"><img class="newgameobject" alt="creating a new gameobject" src="resources/38.png" title="import" data-width="593"></p>
 <p>Your note should be at the top of the <kbd>Note Exporter</kbd>. Once you're sure that all of your <kbd>NoteDescriptor</kbd> settings are correct, click the export button below your note in the <kbd>Note Exporter</kbd>. Make sure to export it into your <kbd>Beat Saber/Custom Notes</kbd> folder so you can test it ingame.</p>
+<div class="notification is-warning">
+<i class="fas fa-exclamation-triangle"></i> <strong id="Disclaimer">Warning:</strong> If you're going to export a note again, make sure to delete the old version. The Note Exporter won't export a note if there's already a note with an identical name in the same folder.
+</div>
 <p class="image-container"><img class="newgameobject" alt="creating a new gameobject" src="resources/39.png" title="import" data-width="591"></p>
 <p class="image-container"><img class="newgameobject" alt="creating a new gameobject" src="resources/40.png" title="import" data-width="943"></p>
 <div class="notification is-warning">
@@ -248,9 +251,35 @@ Custom Colors</a>
 <div class="content">
 <h3 class="title" id="Custom Colors">Custom Colors</h3>
 <hr>
-<u>WIP</u>
+<p>This section is assuming you already have a custom note fully set up and simply want to add support for custom colors, which is highly recommended because it will almost always enhance the user experience.</p>
+<p>CustomColor support works by tinting the notes the current player-set color. If your material has a texture, lighter colors will be tinted more, whilst darker colors will be tinted less.</p>
+<p>Go ahead and create a new material in the <kbd>Materials</kbd> folder. With CustomColor support, generally you're going to be using the same material for both the left and right note, so I'm going to name my material <kbd>NoteMaterial</kbd>.</p>
+<p class="image-container"><img class="newgameobject" alt="creating a new gameobject" src="resources/43.png" title="import" data-width="508"></p>
+<p>Now select the shader you want to use for your note. If you're not sure which shader you want to use, refer back to the <kbd>Adding Materials</kbd> section of this guide. For my note, I'm going to use <kbd>Unlit Glow</kbd>.
+<p class="image-container"><img class="newgameobject" alt="creating a new gameobject" src="resources/44.png" title="import" data-width="596"></p>
+<p>Now apply this material to both your NoteLeft mesh and your NoteRight mesh. Make sure to apply it to BOTH!</p>
+<p class="image-container"><img class="newgameobject" alt="creating a new gameobject" src="resources/45.png" title="import" data-width="214"></p>
+<p class="image-container"><img class="newgameobject" alt="creating a new gameobject" src="resources/46.png" title="import" data-width="448"></p>
+<p class="image-container"><img class="newgameobject" alt="creating a new gameobject" src="resources/47.png" title="import" data-width="173"></p>
+<p>Now that you're done applying the material to all of your note's meshes, go back to the <kbd>NoteMaterial</kbd> in the inspector. To double check that your notes look good when using CustomColors, try messing around with the <kbd>Color</kbd> property - this is what property will be changed when the notes are tinted. </p>
+<p class="image-container"><img class="newgameobject" alt="creating a new gameobject" src="resources/48.png" title="import" data-width="448"></p>
+<p class="image-container"><img class="newgameobject" alt="creating a new gameobject" src="resources/49.png" title="import" data-width="460"></p>
+<p class="image-container"><img class="newgameobject" alt="creating a new gameobject" src="resources/50.png" title="import" data-width="460"></p>
+<p>Once you've confirmed that the notes change color when you change the material's <kbd>Color</kbd> property, go to your note's main GameObject and go to the <kbd>NoteDescriptor</kbd>. Enable <kbd>Uses Note Color</kbd> and feel free to mess around with <kbd>Note Color Strength</kbd>. When <kbd>Note Color Strength</kbd> is at 1, it will tint the color with 100% strength. The lower you go from one, the more subtle it will be. For the purposes of this tutorial, I will be leaving <kbd>Note Color Strength</kbd> at one.</p>
+<p class="image-container"><img class="newgameobject" alt="creating a new gameobject" src="resources/51.png" title="import" data-width="453"></p>
+<p>Your note should now be compatible with Custom Colors! Go ahead and re-export it. If you need a refresher, read the section on Exporting up above.</p>
+<h4 class="title" id="disableonsomeobjects">Disable Custom Colors on certain GameObjects</h4>
+<p>In some cases, you may want CustomColors to not effect a certain mesh. For example, if you have a part of your model that needs to say the same color, such as an arrow needing to be white. There is a simple solution to this problem.</p>
+<p>In this example, I have two meshes inside of my <kbd>LeftNote</kbd> object. I want the <kbd>TriangleMesh</kbd> to be effected by custom colors, but not <kbd>SmallerTriangleMesh</kbd>.</p>
+<p class="image-container"><img class="newgameobject" alt="creating a new gameobject" src="resources/52.png" title="import" data-width="349"></p>
+<p class="image-container"><img class="newgameobject" alt="creating a new gameobject" src="resources/53.png" title="import" data-width="173"></p>
+<p>All you have to do is go into the GameObjects that you do not want to be effected by custom colors and add a <kbd>Disable Note Color On GameObject</kbd> component. Any GameObject with this component will retain how it looks and not be effected by custom colors.
+<div class="notification is-warning">
+<i class="fas fa-exclamation-triangle"></i> <strong id="Disclaimer">Warning:</strong> Remember to apply these changes to all of the notes in your CustomNote!
 </div>
-
+<p class="image-container"><img class="newgameobject" alt="creating a new gameobject" src="resources/54.png" title="import" data-width="453"></p>
+</div>
+</section>
 <script src="https://cdn.assistant.moe/js/burger.js"></script>
 <script src="https://cdn.assistant.moe/js/imagefit.js"></script>
 
