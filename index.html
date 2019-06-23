@@ -135,7 +135,7 @@ Custom Colors</a>
 <hr>
 <p>You should already have a 3d model that you're going to use for your note. For this tutorial I'm going to be using a simple triangle mesh I made in blender. Go ahead and import your model into the project.</p>
 <p class="image-container"><img class="image fit" alt="importing into the unity project" src="resources/05.png" title="importing into the unity project" data-width="547"></p>
-<p>Once you've imported your model, create a new empty <kbd>GameObject</kbd> in the hierarchy view and name it whatever you plan on naming your note.</p>
+<p>Once you've imported your model, create a new empty <kbd>GameObject</kbd> in the hierarchy view and name it whatever you plan on naming your note. I'll be naming mine <kbd>TriangleNote</kbd>.</p>
 <p class="image-container"><img class="newgameobject" alt="creating a new gameobject" src="resources/07.png" title="creating a new gameobject" data-width="249"></p>
 <p>In your note's <kbd>GameObject</kbd>, click <kbd>Add Component</kbd> and add a <kbd>NoteDescriptor</kbd>. Don't worry about changing any of the options in the <kbd>NoteDescriptor</kbd> right now, we'll do that later.</p>
 <p class="image-container"><img class="addingnotedescriptor" alt="adding a NoteDescriptor" src="resources/08.png" title="adding a NoteDescriptor" data-width="455"></p>
@@ -144,24 +144,29 @@ Custom Colors</a>
 <p class="image-container"><img class="newgameobject" alt="Creating an empty GameObject inside of TriangleNote" src="resources/09.png" title="Creating an empty GameObject inside of TriangleNote" data-width="247"></p>
 <p class="image-container"><img class="triangleview1" alt="showing the hierarchy of trianglenote and noteleft" src="resources/10.png" title="showing the hierarchy of trianglenote and noteleft" data-width="95"></p>
 <p> <kbd>NoteLeft</kbd> will serve as a kind of "container" for all of the GameObjects that contain meshes in our note. We'll be able to position and rotate our meshes freely if we put them in a seperate GameObject inside of <kbd>NoteLeft</kbd>, which we would not be able to do if we simply added mesh components directly to the <kbd>NoteLeft</kbd> GameObject.
-<p>Go ahead and create one more empty GameObject inside of <kbd>NoteLeft</kbd>. Since this is going to be a GameObject containing a mesh the name doesn't matter a ton, but I'm going to name it <kbd>TriangleMesh</kbd>.</p>
-<p class="image-container"><img class="newgameobject" alt="creating a new gameobject inside of NoteLeft" src="resources/11.png" title="creating a new gameobject inside of NoteLeft" data-width="231"></p>
-<p>Once you've created the GameObject for your mesh, click <kbd>Add Component</kbd> and add a <kbd>Mesh Filter</kbd> and <kbd>Mesh Renderer</kbd>.</p>
-<p class="image-container"><img class="meshfilterandrenderer" alt="adding a mesh filter and mesh renderer" src="resources/12.png" title="adding a mesh filter and mesh renderer" data-width="452"></p>
-<p>Go ahead and add your mesh to the <kbd>Mesh Filter</kbd>.</p>
-<p class="image-container"><img class="selectingmesh" alt="selecting a mesh" src="resources/13.png" title="selecting a mesh" data-width="449"></p>
-<p class="image-container"><img class="selectingmesh" alt="selecting the triangle mesh" src="resources/14.png" title="selecting the triangle mesh" data-width="166"></p>
+<p>Go ahead and drag and drop your imported mesh onto <kbd>NoteLeft</kbd> in the hierarchy view.</p>
+<p class="image-container"><img class="draggingmesh" alt="dragging mesh onto NoteLeft" src="resources/55.png" title="dragging mesh onto NoteLeft" data-width="95"></p>
+<p class="image-container"><img class="draggingmesh" alt="dragging mesh onto NoteLeft" src="resources/56.png" title="dragging mesh onto NoteLeft" data-width="137"></p>
+<p>You should now have your a child GameObject of <kbd>NoteLeft</kbd> containing your mesh. Depending on what modeling program you used, you may need to remove some non-mesh objects. If you see any objects in your mesh named <kbd>Camera</kbd> or <kbd>Lamp</kbd>, <B>MAKE SURE YOU DELETE THEM!</B> If you see a warning about "breaking the prefab instance", press "Continue".</p> 
+<p class="image-container"><img class="showinghierarchy" alt="Showing Hierarchy and pointing out camera" src="resources/64.png" title="Showing Hierarchy and pointing out camera" data-width="148"></p>
+<p class="image-container"><img class="warningcontinue" alt="Saying continue on warning" src="resources/59.png" title="Saying continue on warning" data-width="453"></p>
+<p>Click on the object you just added and make sure that it has a position of <kbd>(0,0,0)</kbd></p>
+<p class="image-container"><img class="checkingposition" alt="checking position is at 0,0,0" src="resources/61.png" title="checking position is at 0,0,0" data-width="406"></p>
+
 <P>Once you've selected the mesh you need to properly scale it to be the size of an note in-game. Select <kbd>NoteLeft</kbd> and move it near the <kbd>TemplateNoteSize</kbd>. The <kbd>TemplateNoteSize</kbd> should be the white square in your project.</P>
 <div class="notification is-warning">
 <i class="fas fa-exclamation-triangle"></i> <strong id="Disclaimer">Warning:</strong> Make sure you select <kbd>NoteLeft</kbd> when you're moving your note. If you accidentally move the children of <kbd>NoteLeft</kbd> instead, the meshes will not be aligned! The meshes inside of <kbd>NoteLeft</kbd> should almost ALWAYS be at position <kbd>(0,0,0)</kbd> unless you're purposefully adjusting them.
 </div>
-<p class="image-container"><img class="showingmesh" alt="showing the mesh next to TemplateNoteSize" src="resources/15.png" title="showing the mesh next to TemplateNoteSize" data-width="335"></p>
-<p>Once you've moved <kbd>NoteLeft</kbd> to be near the <kbd>TemplateNoteSize</kbd>, start messing with the scale of the mesh objects inside of <kbd>NoteLeft</kbd>. This process may take a very small amount of trial and error, but ideally you want your note's meshes to be about the same size as the <kbd>TemplateNoteSize</kbd> so that they take up the amount of space a regular beat saber note would.</p>
+<p class="image-container"><img class="showingmesh" alt="showing the mesh next to TemplateNoteSize" src="resources/62.png" title="showing the mesh next to TemplateNoteSize" data-width="549"></p>
+<p>Once you've moved <kbd>NoteLeft</kbd> to be near the <kbd>TemplateNoteSize</kbd>, select the scale tool near the top left of the screen.
+<p class="image-container"><img class="scaletool" alt="selecting scale tool" src="resources/63.png" title="selecting scale tool" data-width="205"></p>
+<p>With the GameObject inside of <kbd>NoteLeft</kbd> selected, click and drag on the gray square and move your mouse until your note is roughly the same size as the <kbd>TemplateNoteSize</kbd>.</p>
+<p class="image-container"><img class="usescaletool" alt="showing how to use scale tool" src="resources/60.png" title="showing how to use scale tool" data-width="316"></p>
 <div class="notification is-warning">
 <i class="fas fa-exclamation-triangle"></i> <strong id="Disclaimer">Warning:</strong> Make sure you're adjusting the scale of the objects INSIDE of <kbd>NoteLeft</kbd>. <kbd>NoteLeft</kbd> will always have a forced scale of one, so if you set its scale to anything other than <kbd>(1,1,1)</kbd> your model will look different in-game!
 </div>
-<p class="image-container"><img class="showingmesh" alt="showing the correctly scaled mesh next to TemplateNoteSize" src="resources/16.png" title="showing the correctly scaled mesh next to TemplateNoteSize" data-width="1072"></p>
-<p>As you can see, the scale that worked for my mesh is about <kbd>(65,65,65)</kbd>. This value will probably be different depending on what mesh you're using. If you can't get the mesh to be exactly the same size as the <kbd>TemplateNoteSize</kbd> don't worry too much because it doesn't need to be exact. Keep in mind that having a note be slightly too large is <i>generally</i> better than having it be slightly too small. </p>
+<p class="image-container"><img class="showingmesh" alt="showing the correctly scaled mesh next to TemplateNoteSize" src="resources/66.png" title="showing the correctly scaled mesh next to TemplateNoteSize" data-width="1139"></p>
+<p>As you can see, the scale that worked for my mesh is about <kbd>(0.65,0.65,0.65)</kbd>. This value will probably be different depending on what mesh you're using. If you can't get the mesh to be exactly the same size as the <kbd>TemplateNoteSize</kbd> don't worry too much because it doesn't need to be exact. Keep in mind that having a note be slightly too large is <i>generally</i> better than having it be slightly too small. </p>
 <div class="notification is-warning">
 <i class="fas fa-exclamation-triangle"></i> <strong id="Disclaimer">Warning:</strong> Make sure your notes are facing the correct direction. Look at the direction all of the other notes in the scene and ensure that your meshes are facing the same way. <strong id="Disclaimer">REMEMBER:</strong> The <kbd>NoteLeft</kbd> GameObject should always have a rotation of <kbd>(0,0,0)</kbd>. If you need to rotate your note, don't rotate <kbd>NoteLeft</kbd>, but instead rotate the meshes inside of it!
 </div>
@@ -190,13 +195,13 @@ Custom Colors</a>
 <p>Now that the color is set, go back to your mesh and set it as the material.</p>
 <p class="image-container"><img class="materialonmesh" alt="selecting the material on the mesh" src="resources/20.png" title="selecting the material on the mesh" data-width="449"></p>
 <p class="image-container"><img class="materialonmesh" alt="selecting the material on the mesh" src="resources/21.png" title="selecting the material on the mesh" data-width="183"></p>
-<p>Your note should now have a material that shows up properly ingame. Now we need to do the same thing for the right note. Right click on <kbd>NoteLeft</kbd> and <kbd>Duplicate</kbd> it. Rename this duplicate <kbd>NoteRight</kbd>.</p>
-<p class="image-container"><img class="duplicateleftnote" alt="duplicating the left note" src="resources/23.png" title="duplicating the left note" data-width="256"></p>
-<p class="image-container"><img class="showinghierarchy" alt="showing the hierarchy of the note, with NoteLeft and NoteRight" src="resources/24.png" title="showing the hierarchy of the note, with NoteLeft and NoteRight" data-width="111"></p>
+<p>Your note should now have a material that shows up properly ingame. Now we need to create a right note and do the same thing again. Right click on <kbd>NoteLeft</kbd> and <kbd>Duplicate</kbd> it. Rename this duplicate <kbd>NoteRight</kbd>.</p>
+<p class="image-container"><img class="duplicateleftnote" alt="duplicating the left note" src="resources/67.png" title="duplicating the left note" data-width="222"></p>
+<p class="image-container"><img class="showinghierarchy" alt="showing the hierarchy of the note, with NoteLeft and NoteRight" src="resources/68.png" title="showing the hierarchy of the note, with NoteLeft and NoteRight" data-width="164"></p>
 <p>Now, follow the steps above again to create a second material. Make sure to use the same shader if you want the notes to look consistent between colors. For my second material, I'm going to name it RightMaterial and give it a blue color.</p>
 <p class="image-container"><img class="colorpicker" alt="picking the color of RightMaterial" src="resources/25.png" title="picking the color of RightMaterial" data-width="460"></p>
 <p>Now that you have the second material, apply it to the mesh of the <kbd>NoteRight</kbd>.</p>
-<p class="image-container"><img class="clickingmesh" alt="clicking on the mesh of the right note" src="resources/26.png" title="clicking on the mesh of the right note" data-width="144"></p>
+<p class="image-container"><img class="clickingmesh" alt="clicking on the mesh of the right note" src="resources/69.png" title="clicking on the mesh of the right note" data-width="239"></p>
 <p class="image-container"><img class="materialonmesh" alt="selecting the right note material on the right note mesh" src="resources/27.png" title="selecting the right note material on the right note mesh" data-width="446"></p>
 <p class="image-container"><img class="materialonmesh" alt="selecting the right note material on the right note mesh" src="resources/28.png" title="selecting the right note material on the right note mesh" data-width="172"></p>
 <p>You now have two notes, both of which are properly textured and will show up ingame.</p>
@@ -228,7 +233,7 @@ Custom Colors</a>
 </div>
 <p class="image-container"><img class="showingnotedescriptor" alt="showing notedescriptor" src="resources/36.png" title="showing notedescriptor" data-width="454"></p>
 <p>Now that our <kbd>NoteDescriptor</kbd> options are completely set, we can export our note using the <kbd>Note Exporter</kbd>. To get to the <kbd>Note Exporter</kbd>, look for the tab on the left of your screen, near the <kbd>Hierarchy</kbd>.</p>
-<p class="image-container"><img class="clickingnoteexporter" alt="clicking note exporter" src="resources/37.png" title="clicking note exporter" data-width="594"></p>
+<p class="image-container"><img class="clickingnoteexporter" alt="clicking note exporter" src="resources/70.png" title="clicking note exporter" data-width="320"></p>
 <p class="image-container"><img class="noteexporter" alt="showing note in note exporter" src="resources/38.png" title="showing note in note exporter" data-width="593"></p>
 <p>Your note should be at the top of the <kbd>Note Exporter</kbd>. Once you're sure that all of your <kbd>NoteDescriptor</kbd> settings are correct, click the export button below your note in the <kbd>Note Exporter</kbd>. Make sure to export it into your <kbd>Beat Saber/Custom Notes</kbd> folder so you can test it ingame.</p>
 <div class="notification is-warning">
@@ -258,7 +263,7 @@ Custom Colors</a>
 <p>Now select the shader you want to use for your note. If you're not sure which shader you want to use, refer back to the <kbd>Adding Materials</kbd> section of this guide. For my note, I'm going to use <kbd>Unlit Glow</kbd>.
 <p class="image-container"><img class="selectingshader" alt="selecting the shader" src="resources/44.png" title="selectingshader" data-width="596"></p>
 <p>Now apply this material to both your NoteLeft mesh and your NoteRight mesh. Make sure to apply it to BOTH!</p>
-<p class="image-container"><img class="clickingmesh" alt="clicking trianglemesh" src="resources/45.png" title="clicking trianglemesh" data-width="214"></p>
+<p class="image-container"><img class="clickingmesh" alt="clicking trianglemesh" src="resources/71.png" title="clicking trianglemesh" data-width="184"></p>
 <p class="image-container"><img class="selectingmaterial" alt="selecting material" src="resources/46.png" title="selecting material" data-width="448"></p>
 <p class="image-container"><img class="selectingmaterial" alt="selecting material" src="resources/47.png" title="selecting material" data-width="173"></p>
 <p>Now that you're done applying the material to all of your note's meshes, go back to the <kbd>NoteMaterial</kbd> in the inspector. To double check that your notes look good when using CustomColors, try messing around with the <kbd>Color</kbd> property - this is what property will be changed when the notes are tinted. </p>
