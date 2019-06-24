@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en"><head>
 <meta content="text/html; charset=utf-8" http-equiv="content-type">
 
@@ -29,7 +30,7 @@
 <link href="https://cdn.assistant.moe/css/bulma.css" media="screen" rel="stylesheet">
 <link href="https://cdn.assistant.moe/css/custom.css" rel="stylesheet">
 <link href="https://cdn.assistant.moe/css/light.css" id="light-theme" rel="stylesheet">
-<link href="https://cdn.assistant.moe/css/dark.css" id="dark-theme" rel="stylesheet" disabled="">
+<link href="https://cdn.assistant.moe/css/dark.css" id="dark-theme" rel="stylesheet" disabled>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="https://cdn.assistant.moe/js/theme.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.assistant.moe/css/transition.css" id="theme">
@@ -61,7 +62,7 @@ Creating A Note</a>
 Adding Materials</a>
 <a class="navbar-item" href="#Exporting">
 Exporting Your Notes</a>
-<a class="navbar-item" href="#Custom Colors">
+<a class="navbar-item" href="#CustomColors">
 Custom Colors</a>
 </div>
 <div class="navbar-end">
@@ -155,7 +156,7 @@ Custom Colors</a>
 
 <P>Once you've selected the mesh you need to properly scale it to be the size of an note in-game. Select <kbd>NoteLeft</kbd> and move it near the <kbd>TemplateNoteSize</kbd>. The <kbd>TemplateNoteSize</kbd> should be the white square in your project.</P>
 <div class="notification is-warning">
-<i class="fas fa-exclamation-triangle"></i> <strong id="Disclaimer">Warning:</strong> Make sure you select <kbd>NoteLeft</kbd> when you're moving your note. If you accidentally move the children of <kbd>NoteLeft</kbd> instead, the meshes will not be aligned! The meshes inside of <kbd>NoteLeft</kbd> should almost ALWAYS be at position <kbd>(0,0,0)</kbd> unless you're purposefully adjusting them.
+<i class="fas fa-exclamation-triangle"></i> <strong >Warning:</strong> Make sure you select <kbd>NoteLeft</kbd> when you're moving your note. If you accidentally move the children of <kbd>NoteLeft</kbd> instead, the meshes will not be aligned! The meshes inside of <kbd>NoteLeft</kbd> should almost ALWAYS be at position <kbd>(0,0,0)</kbd> unless you're purposefully adjusting them.
 </div>
 <p class="image-container"><img class="image fit" alt="showing the mesh next to TemplateNoteSize" src="resources/62.png" title="showing the mesh next to TemplateNoteSize" data-width="549"></p>
 <p>Once you've moved <kbd>NoteLeft</kbd> to be near the <kbd>TemplateNoteSize</kbd>, select the scale tool near the top left of the screen.
@@ -163,12 +164,12 @@ Custom Colors</a>
 <p>With the GameObject inside of <kbd>NoteLeft</kbd> selected, click and drag on the gray square and move your mouse until your note is roughly the same size as the <kbd>TemplateNoteSize</kbd>.</p>
 <p class="image-container"><img class="image fit" alt="showing how to use scale tool" src="resources/60.png" title="showing how to use scale tool" data-width="316"></p>
 <div class="notification is-warning">
-<i class="fas fa-exclamation-triangle"></i> <strong id="Disclaimer">Warning:</strong> Make sure you're adjusting the scale of the objects INSIDE of <kbd>NoteLeft</kbd>. <kbd>NoteLeft</kbd> will always have a forced scale of one, so if you set its scale to anything other than <kbd>(1,1,1)</kbd> your model will look different in-game!
+<i class="fas fa-exclamation-triangle"></i> <strong>Warning:</strong> Make sure you're adjusting the scale of the objects INSIDE of <kbd>NoteLeft</kbd>. <kbd>NoteLeft</kbd> will always have a forced scale of one, so if you set its scale to anything other than <kbd>(1,1,1)</kbd> your model will look different in-game!
 </div>
 <p class="image-container"><img class="image fit" alt="showing the correctly scaled mesh next to TemplateNoteSize" src="resources/66.png" title="showing the correctly scaled mesh next to TemplateNoteSize" data-width="1139"></p>
 <p>As you can see, the scale that worked for my mesh is about <kbd>(0.65,0.65,0.65)</kbd>. This value will probably be different depending on what mesh you're using. If you can't get the mesh to be exactly the same size as the <kbd>TemplateNoteSize</kbd> don't worry too much because it doesn't need to be exact. Keep in mind that having a note be slightly too large is <i>generally</i> better than having it be slightly too small. </p>
 <div class="notification is-warning">
-<i class="fas fa-exclamation-triangle"></i> <strong id="Disclaimer">Warning:</strong> Make sure your notes are facing the correct direction. Look at the direction all of the other notes in the scene and ensure that your meshes are facing the same way. <strong id="Disclaimer">REMEMBER:</strong> The <kbd>NoteLeft</kbd> GameObject should always have a rotation of <kbd>(0,0,0)</kbd>. If you need to rotate your note, don't rotate <kbd>NoteLeft</kbd>, but instead rotate the meshes inside of it!
+<i class="fas fa-exclamation-triangle"></i> <strong>Warning:</strong> Make sure your notes are facing the correct direction. Look at the direction all of the other notes in the scene and ensure that your meshes are facing the same way. <strong>REMEMBER:</strong> The <kbd>NoteLeft</kbd> GameObject should always have a rotation of <kbd>(0,0,0)</kbd>. If you need to rotate your note, don't rotate <kbd>NoteLeft</kbd>, but instead rotate the meshes inside of it!
 </div>
 </div>
 </section>
@@ -217,7 +218,7 @@ Custom Colors</a>
 <p>Set the <kbd>Note Name</kbd> to what you want your note to be called ingame. I'll set mine to "Triangle Notes". Additionally, set the <kbd>Author Name</kbd> to the name you want to be credited by. I'll be setting mine to "Bobbie".</p>
 <p class="image-container"><img class="image fit" alt="showing the notedescriptor" src="resources/30.png" title="showing the notedescriptor" data-width="448"></p>
 <div class="notification is-warning">
-<i class="fas fa-exclamation-triangle"></i> <strong id="Disclaimer">Warning:</strong> Although it's not <i>technically</i> required, it is highly recommended you add an icon to your notes so that they are easier to identify in the UI.
+<i class="fas fa-exclamation-triangle"></i> <strong>Warning:</strong> Although it's not <i>technically</i> required, it is highly recommended you add an icon to your notes so that they are easier to identify in the UI.
 </div>
 <p>Import the image you're going to use for your icon by clicking <kbd>Import New Asset</kbd>. I'll be using a triangle icon I made.</p>
 <p class="image-container"><img class="image fit" alt="importing a new asset" src="resources/31.png" title="importing a new asset" data-width="323"></p>
@@ -229,7 +230,7 @@ Custom Colors</a>
 <p class="image-container"><img class="image fit" alt="selecting texture" src="resources/35.png" title="selecting texture" data-width="173"></p>
 <p>Now we have three options left - <kbd>Disable Base Note Arrows</kbd>, <kbd>Uses Note Color</kbd>, and <kbd>Note Color Strength</kbd>. Because my model does not have any custom arrows, I'm going to leave <kbd>Disable Base Note Arrows</kbd> unchecked so we can keep the default arrows. I'm going to leave <kbd>Uses Note Color</kbd> unchecked for now too, which means that we don't need to change <kbd>Note Color Strength</kbd> either.</p>
 <div class="notification is-warning">
-<i class="fas fa-exclamation-triangle"></i> <strong id="Disclaimer">Warning:</strong> If you're going to enable <kbd>Uses Note Color</kbd> - and I highly recommend you do - make sure to read the section on how to support custom colors correctly!
+<i class="fas fa-exclamation-triangle"></i> <strong>Warning:</strong> If you're going to enable <kbd>Uses Note Color</kbd> - and I highly recommend you do - make sure to read the section on how to support custom colors correctly!
 </div>
 <p class="image-container"><img class="image fit" alt="showing notedescriptor" src="resources/36.png" title="showing notedescriptor" data-width="454"></p>
 <p>Now that our <kbd>NoteDescriptor</kbd> options are completely set, we can export our note using the <kbd>Note Exporter</kbd>. To get to the <kbd>Note Exporter</kbd>, look for the tab on the left of your screen, near the <kbd>Hierarchy</kbd>.</p>
@@ -237,12 +238,12 @@ Custom Colors</a>
 <p class="image-container"><img class="image fit" alt="showing note in note exporter" src="resources/38.png" title="showing note in note exporter" data-width="593"></p>
 <p>Your note should be at the top of the <kbd>Note Exporter</kbd>. Once you're sure that all of your <kbd>NoteDescriptor</kbd> settings are correct, click the export button below your note in the <kbd>Note Exporter</kbd>. Make sure to export it into your <kbd>Beat Saber/Custom Notes</kbd> folder so you can test it ingame.</p>
 <div class="notification is-warning">
-<i class="fas fa-exclamation-triangle"></i> <strong id="Disclaimer">Warning:</strong> If you're going to export a note again, make sure to delete the old version. The Note Exporter won't export a note if there's already a note with an identical name in the same folder.
+<i class="fas fa-exclamation-triangle"></i> <strong>Warning:</strong> If you're going to export a note again, make sure to delete the old version. The Note Exporter won't export a note if there's already a note with an identical name in the same folder.
 </div>
 <p class="image-container"><img class="image fit" alt="clicking export notes" src="resources/39.png" title="clicking export notes" data-width="591"></p>
 <p class="image-container"><img class="image fit" alt="exporting note" src="resources/40.png" title="exporting note" data-width="943"></p>
 <div class="notification is-info">
-<i class="fas fa-exclamation-triangle"></i> <strong id="Disclaimer">Tip:</strong> If you own beat saber on steam and want to see how your notes look ingame without putting on your headset, the <kbd>fpfc</kbd> launch argument is extremely helpful and allows you to control the ingame camera using your mouse
+<i class="fas fa-exclamation-triangle"></i> <strong>Tip:</strong> If you own beat saber on steam and want to see how your notes look ingame without putting on your headset, the <kbd>fpfc</kbd> launch argument is extremely helpful and allows you to control the ingame camera using your mouse
 </div>
 <p>Now that your notes are exported, you can start beat saber and see how they look ingame. In beat saber, click <kbd>Mods</kbd> and then <kbd>CustomNotes</kbd>. If you did everything correctly, you should see your notes in the list.</p>
 <p class="image-container"><img class="image fit" alt="showing note ingame" src="resources/41.png" title="showing note ingame" data-width="604"></p>
@@ -254,7 +255,7 @@ Custom Colors</a>
 
 <section class="section">
 <div class="content">
-<h3 class="title" id="Custom Colors">Custom Colors</h3>
+<h3 class="title" id="CustomColors">Custom Colors</h3>
 <hr>
 <p>This section is assuming you already have a custom note fully set up and simply want to add support for custom colors, which is highly recommended because it will almost always enhance the user experience.</p>
 <p>CustomColor support works by tinting the notes the current player-set color. If your material has a texture, lighter colors will be tinted more, whilst darker colors will be tinted less.</p>
@@ -280,7 +281,7 @@ Custom Colors</a>
 <p class="image-container"><img class="image fit" alt="double mesh hierarchy" src="resources/53.png" title="double mesh hierarchy" data-width="173"></p>
 <p>All you have to do is go into the GameObjects that you do not want to be affected by custom colors and add a <kbd>Disable Note Color On GameObject</kbd> component. Any GameObject with this component will retain how it looks and not be affected by custom colors.
 <div class="notification is-warning">
-<i class="fas fa-exclamation-triangle"></i> <strong id="Disclaimer">Warning:</strong> Remember to apply these changes to all of the notes in your CustomNote!
+<i class="fas fa-exclamation-triangle"></i> <strong>Warning:</strong> Remember to apply these changes to all of the notes in your CustomNote!
 </div>
 <p class="image-container"><img class="image fit" alt="adding a disable note color on gameobject component" src="resources/54.png" title="adding a disable note color on gameobject component" data-width="453"></p>
 </div>
@@ -288,7 +289,5 @@ Custom Colors</a>
 <script src="https://cdn.assistant.moe/js/burger.js"></script>
 <script src="https://cdn.assistant.moe/js/imagefit.js"></script>
 
-
-
-
+</div>
 </body></html>
